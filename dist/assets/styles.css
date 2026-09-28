@@ -230,3 +230,113 @@ p { margin: 0; }
   .page-hero-image img { height: 320px; }
   .contact-panel { padding: 26px; }
 }
+
+/* Refined editorial scale and spacing */
+body { line-height: 1.62; overflow-x: hidden; }
+.container { width: min(calc(100% - 64px), 1180px); }
+.nav-wrap { min-height: 74px; gap: 26px; }
+.brand img { width: 188px; }
+.nav { gap: 23px; }
+.nav a { font-size: 13px; }
+.nav-cta { min-height: 46px; padding-inline: 18px; }
+.section { padding: 88px 0; }
+.section-head { max-width: 660px; margin-bottom: 36px; }
+.section-head h2 + p { margin-top: 14px; }
+h1 { font-size: clamp(2.75rem, 4.25vw, 3.9rem); line-height: 1.08; letter-spacing: -.042em; }
+h2 { font-size: clamp(1.9rem, 3vw, 2.75rem); line-height: 1.13; }
+h3 { line-height: 1.22; }
+.lead { font-size: clamp(1rem, 1.25vw, 1.1rem); line-height: 1.67; }
+.eyebrow { margin-bottom: 12px; }
+.hero { padding: 56px 0 84px; }
+.hero-grid { grid-template-columns: 1.12fr .88fr; gap: 58px; }
+.hero-copy { padding-block: 10px; }
+.hero-copy h1 { max-width: 640px; }
+.hero-copy .lead { max-width: 590px; margin-top: 20px; }
+.hero-actions { margin-top: 28px; }
+.trust-list { margin-top: 26px; gap: 12px 22px; }
+.hero-media img { height: 500px; border-radius: 26px 16px 26px 16px; }
+.hero-media::before { inset: 16px -14px -14px 24px; }
+.info-shell { margin-top: -42px; }
+.info-bar { border-radius: 18px; }
+.info-item { min-height: 106px; padding: 20px 22px; }
+.icon-box { width: 38px; height: 38px; border-radius: 11px; }
+.cards-3 { gap: 20px; }
+.care-card { min-height: 274px; padding: 28px; }
+.care-card h3 { font-size: 1.5rem; margin-bottom: 12px; }
+.care-card .text-link { padding-top: 24px; }
+.care-card.primary { transform: translateY(-6px); }
+.split { gap: 62px; }
+.split-media img { height: 530px; }
+.mini-grid { gap: 20px 26px; margin: 30px 0; }
+.services-grid { gap: 16px; }
+.service-card { padding: 25px; }
+.service-card .icon-box { margin-bottom: 18px; }
+.features-grid { gap: 16px; }
+.feature-card { padding: 26px 22px; }
+.feature-card h3 { margin: 16px 0 8px; }
+.doctor-card { min-height: 230px; }
+.doctor-copy { padding: 26px; }
+.map-card { min-height: 420px; }
+.cta-section { padding: 72px 0; }
+.site-footer { padding-top: 60px; }
+.page-hero { padding: 70px 0; }
+.page-hero-image img { height: 390px; }
+
+@media (max-width: 1060px) {
+  .container { width: min(calc(100% - 48px), 1180px); }
+  .nav-wrap { min-height: 72px; }
+  .nav { inset: 72px 0 auto; }
+  .hero-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .hero-media img { height: 440px; }
+}
+
+@media (max-width: 800px) {
+  .container { width: min(calc(100% - 36px), 1180px); }
+  .section { padding: 68px 0; }
+  .section-head { margin-bottom: 30px; }
+  .hero { padding: 48px 0 70px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero-media { order: 0; }
+  .hero-copy { order: -1; padding: 0; }
+  .hero-media img { height: 390px; }
+  .info-shell { margin-top: -30px; }
+  .care-card { min-height: 0; }
+  .split { gap: 38px; }
+  .split-media img { height: 420px; }
+  .page-hero { padding: 58px 0; }
+}
+
+@media (max-width: 560px) {
+  .container { width: calc(100% - 32px); }
+  .nav-wrap { min-height: 66px; gap: 8px; }
+  .brand img { width: 140px; }
+  .nav { top: 66px; }
+  .nav-cta { min-width: 70px; min-height: 40px; margin-left: auto; padding: 0 12px; font-size: 0; }
+  .nav-cta::after { content: "Book"; font-size: 13px; }
+  .menu-toggle { display: flex; width: 40px; height: 40px; flex: 0 0 40px; }
+  h1 { font-size: clamp(2.15rem, 10.5vw, 2.65rem); line-height: 1.08; overflow-wrap: anywhere; }
+  h2 { font-size: 1.85rem; }
+  .lead { font-size: 1rem; line-height: 1.65; }
+  .hero { padding: 38px 0 58px; }
+  .hero-grid { gap: 30px; }
+  .hero-copy .lead { margin-top: 16px; }
+  .hero-actions { margin-top: 24px; gap: 10px; }
+  .hero-actions .btn { width: 100%; min-height: 48px; }
+  .trust-list { margin-top: 22px; font-size: 13px; }
+  .hero-media img { height: 290px; border-radius: 22px 14px 22px 14px; }
+  .hero-media::before { inset: 12px -8px -10px 16px; }
+  .info-shell { margin-top: -22px; }
+  .info-bar { border-radius: 16px; }
+  .info-item { padding: 17px 18px; }
+  .section { padding: 58px 0; }
+  .care-card, .service-card, .feature-card, .content-block { padding: 24px; }
+  .care-card.primary { transform: none; }
+  .split-media img { height: 320px; }
+  .split-media::after { bottom: 14px; font-size: 13px; }
+  .mini-grid { margin: 26px 0; }
+  .map-card { min-height: 330px; }
+  .cta-section { padding: 58px 0; }
+  .site-footer { padding-top: 52px; }
+  .page-hero { padding: 48px 0; }
+  .page-hero-image img { height: 280px; }
+}
