@@ -412,6 +412,13 @@ h3 { line-height: 1.22; }
 .services-menu small { color: var(--muted); font-size: 12px; font-weight: 500; line-height: 1.35; }
 .services-menu a:hover small,
 .services-menu a[aria-current="page"] small { color: #52727b; }
+.services-menu-footer { margin-top: 6px; padding-top: 8px; border-top: 1px solid var(--line); }
+.services-menu .services-overview { background: var(--blue); }
+.services-menu .services-overview:hover,
+.services-menu .services-overview[aria-current="page"] { background: #dff1ee; }
+.service-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.focused-card .btn { align-self: flex-start; margin-top: auto; }
+@media (max-width: 800px) { .service-grid-4 { grid-template-columns: 1fr; } }
 
 @media (max-width: 1060px) {
   .nav-group { width: 100%; }
