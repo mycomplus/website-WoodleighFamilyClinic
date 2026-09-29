@@ -565,6 +565,12 @@ h3 { line-height: 1.22; }
 .doctor-scope li::before { content: "✓"; margin-right: 10px; color: #6fe0d3; font-weight: 900; }
 .visit-section { padding-block: 104px; }
 .visit-section .location-copy .lead { margin-top: 8px; }
+.visit-contact-list { margin: 0 0 22px; }
+.visit-contact-list li { align-items: flex-start; }
+.visit-contact-list strong { max-width: 330px; line-height: 1.65; }
+.visit-contact-list a { color: var(--teal-dark); }
+.footer-contact { margin-top: 14px; font-size: 14px; line-height: 1.65; }
+.footer-contact a { color: white; font-weight: 750; }
 .final-cta { padding-block: 82px; background: linear-gradient(120deg, var(--teal-dark), var(--navy)); }
 .final-cta .eyebrow { color: #bcece6; margin-bottom: 12px; }
 .final-cta .btn-secondary { color: white; border-color: rgba(255,255,255,.45); background: transparent; }

@@ -40,5 +40,5 @@ document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 const form = document.querySelector('[data-contact-form]');
 if (form) form.addEventListener('submit', (event) => {
   event.preventDefault();
-  form.querySelector('[role="status"]').textContent = 'Thank you. This design concept does not send messages yet—please call or WhatsApp the clinic for assistance.';
+  form.querySelector('[role="status"]').textContent = 'Thank you. This form does not send messages yet—please call the clinic at +65 6015 0982 for assistance.';
 });
