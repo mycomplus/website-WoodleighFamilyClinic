@@ -141,7 +141,7 @@ p { margin: 0; }
 .cta-actions { flex: 0 0 auto; display: flex; gap: 12px; }
 .site-footer { padding: 72px 0 28px; color: #c4d3dd; background: var(--navy-deep); }
 .footer-grid { display: grid; grid-template-columns: 1.5fr .7fr 1fr; gap: 70px; }
-.footer-brand img { width: 240px; padding: 10px; background: white; border-radius: 16px; }
+.footer-brand img { display: block; width: min(280px, 100%); height: 112px; object-fit: cover; object-position: center; background: white; border-radius: 16px; }
 .footer-brand p { max-width: 400px; margin-top: 20px; }
 .site-footer h3 { color: white; font-size: 1rem; margin-bottom: 18px; }
 .footer-links { display: grid; gap: 9px; }
