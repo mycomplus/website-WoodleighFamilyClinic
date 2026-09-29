@@ -157,7 +157,21 @@ p { margin: 0; }
 .content-block p { color: var(--muted); }
 .prose { max-width: 790px; }
 .prose p + p { margin-top: 18px; }
-.contact-panel { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; padding: 42px; border: 1px solid var(--line); border-radius: 28px; background: white; }
+.contact-panel { display: grid; grid-template-columns: .95fr 1.05fr; gap: 54px; padding: 46px; border: 1px solid var(--line); border-radius: 28px; background: white; }
+.clinic-visit-card h2 { max-width: 460px; }
+.clinic-address { margin: 18px 0 26px; color: var(--muted); font-size: 16px; font-style: normal; line-height: 1.72; }
+.clinic-facts { margin-bottom: 24px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fbfdfd; }
+.clinic-fact { padding: 20px 22px; }
+.clinic-fact + .clinic-fact { border-top: 1px solid var(--line); }
+.fact-label { margin-bottom: 12px; color: var(--teal-dark); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.hours-list { display: grid; }
+.hours-row { display: grid; grid-template-columns: 112px 1fr; gap: 20px; padding: 10px 0; }
+.hours-row + .hours-row { border-top: 1px dashed #dbe6e9; }
+.hours-row span { color: var(--muted); font-size: 14px; }
+.hours-row strong { color: var(--navy); font-size: 14px; line-height: 1.55; }
+.clinic-phone { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.clinic-phone .fact-label { margin: 0; }
+.clinic-phone a { padding: 8px 12px; border-radius: 10px; color: var(--teal-dark); background: var(--mint); font-size: 17px; font-weight: 800; }
 .contact-form { display: grid; gap: 16px; }
 .field { display: grid; gap: 7px; }
 .field label { color: var(--navy); font-weight: 750; font-size: 14px; }
@@ -229,6 +243,8 @@ p { margin: 0; }
   .page-hero-image { min-height: 300px; }
   .page-hero-image img { height: 320px; }
   .contact-panel { padding: 26px; }
+  .hours-row { grid-template-columns: 1fr; gap: 2px; }
+  .clinic-phone { align-items: flex-start; flex-direction: column; }
 }
 
 /* Refined editorial scale and spacing */
