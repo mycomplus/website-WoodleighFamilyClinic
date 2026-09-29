@@ -490,43 +490,50 @@ h3 { line-height: 1.22; }
 .life-stage-section { background: var(--mint); }
 .life-stage-heading { max-width: 770px; margin-bottom: 46px; }
 .life-stage-heading .lead { margin-top: 16px; }
-.stage-list { display: grid; gap: 16px; }
+.stage-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .stage-panel {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  min-height: 260px;
-  overflow: hidden;
-  border: 1px solid rgba(12,51,86,.1);
-  border-radius: 24px;
-  background: rgba(255,255,255,.78);
-}
-.stage-index {
   display: flex;
   flex-direction: column;
+  min-height: 460px;
+  overflow: hidden;
+  border: 1px solid rgba(12,51,86,.1);
+  border-top: 4px solid var(--teal);
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 16px 34px rgba(12,51,86,.055);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.stage-panel:hover { transform: translateY(-5px); box-shadow: 0 22px 44px rgba(12,51,86,.09); }
+.stage-index {
+  display: flex;
   justify-content: space-between;
-  padding: 30px;
+  align-items: center;
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--line);
   color: var(--teal-dark);
-  background: rgba(255,255,255,.5);
   font-family: Manrope, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   letter-spacing: -.04em;
 }
-.stage-index span { color: var(--navy); font-size: 14px; letter-spacing: .12em; text-transform: uppercase; }
+.stage-index span { padding: 7px 10px; border-radius: 999px; color: var(--navy); background: var(--mint); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
 .stage-content {
-  display: grid;
-  grid-template-columns: minmax(220px, .9fr) 1fr auto;
-  gap: 38px;
-  align-items: center;
-  padding: 32px 34px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 28px;
 }
-.stage-content h3 { max-width: 260px; font-size: 1.7rem; }
-.stage-content ul { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 14px; }
+.stage-content h3 { max-width: none; min-height: 68px; font-size: 1.55rem; }
+.stage-content ul { display: grid; gap: 11px; margin: 22px 0 28px; padding: 20px 0 0; border-top: 1px solid var(--line); list-style: none; color: var(--muted); font-size: 14px; }
 .stage-content li { position: relative; padding-left: 18px; }
 .stage-content li::before { content: ""; position: absolute; left: 0; top: .7em; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
-.stage-content .btn { white-space: nowrap; }
-.stage-adults { background: white; }
-.stage-prevention { background: #f7fafc; }
+.stage-content .btn { width: 100%; margin-top: auto; padding-inline: 14px; white-space: normal; text-align: center; }
+.stage-adults { border-top-color: var(--navy); }
+.stage-adults .stage-index { color: var(--navy); }
+.stage-adults .stage-index span { background: var(--blue); }
+.stage-prevention { border-top-color: #4f8ca6; }
+.stage-prevention .stage-index { color: #3e7891; }
+.stage-prevention .stage-index span { background: #edf5f8; }
 .why-section { background: var(--cream); }
 .why-layout { display: grid; grid-template-columns: .82fr 1.18fr; gap: 86px; align-items: start; }
 .why-intro { position: sticky; top: 118px; }
@@ -578,9 +585,6 @@ h3 { line-height: 1.22; }
 
 @media (max-width: 1060px) {
   .help-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .stage-panel { grid-template-columns: 160px 1fr; }
-  .stage-content { grid-template-columns: 1fr 1fr; }
-  .stage-content .btn { justify-self: start; }
   .why-layout { gap: 52px; }
   .doctor-trust { gap: 44px; padding: 48px; }
 }
@@ -591,11 +595,9 @@ h3 { line-height: 1.22; }
   .section-intro { gap: 16px; }
   .help-grid { grid-template-columns: 1fr 1fr; }
   .need-card { min-height: 250px; }
-  .stage-panel { grid-template-columns: 112px 1fr; }
-  .stage-index { padding: 24px; font-size: 2rem; }
-  .stage-content { grid-template-columns: 1fr; gap: 20px; padding: 28px; }
-  .stage-content h3 { max-width: none; }
-  .stage-content ul { max-width: 530px; }
+  .stage-list { grid-template-columns: 1fr; }
+  .stage-panel { min-height: 0; }
+  .stage-content h3 { min-height: 0; }
   .why-intro { position: static; }
   .doctor-trust { gap: 34px; padding: 40px; }
 }
@@ -608,11 +610,8 @@ h3 { line-height: 1.22; }
   .need-card { min-height: 0; padding: 24px; }
   .need-number { margin-bottom: 26px; }
   .life-stage-heading { margin-bottom: 30px; }
-  .stage-panel { grid-template-columns: 1fr; }
-  .stage-index { min-height: 92px; flex-direction: row; align-items: center; }
+  .stage-index { padding: 20px 22px 16px; }
   .stage-content { padding: 24px; }
-  .stage-content ul { grid-template-columns: 1fr; }
-  .stage-content .btn { width: 100%; white-space: normal; }
   .why-point { grid-template-columns: 42px 1fr; }
   .doctors-section { padding-block: 58px; }
   .doctor-trust { padding: 28px 24px; border-radius: 22px; }
