@@ -512,14 +512,14 @@ h3 { line-height: 1.22; }
 .need-card h3 { font-size: 1.25rem; }
 .need-card p { margin-top: 8px; color: var(--muted); font-size: 16px; }
 .journey-link { display: inline-block; margin-top: 16px; color: var(--teal-dark); font-size: 14px; font-weight: 750; }
-.life-stage-section { background: var(--mint); }
-.life-stage-heading { max-width: 770px; margin-bottom: 46px; }
+.life-stage-section { padding-block: 64px; background: var(--mint); }
+.life-stage-heading { max-width: 770px; margin-bottom: 30px; }
 .life-stage-heading .lead { margin-top: 16px; }
 .stage-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .stage-panel {
   display: flex;
   flex-direction: column;
-  min-height: 460px;
+  min-height: 400px;
   overflow: hidden;
   border: 1px solid rgba(12,51,86,.1);
   border-top: 4px solid var(--teal);
@@ -533,7 +533,7 @@ h3 { line-height: 1.22; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 28px 20px;
+  padding: 18px 26px 14px;
   border-bottom: 1px solid var(--line);
   color: var(--teal-dark);
   font-family: Manrope, sans-serif;
@@ -546,10 +546,10 @@ h3 { line-height: 1.22; }
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 28px;
+  padding: 22px 26px 24px;
 }
-.stage-content h3 { max-width: none; min-height: 68px; font-size: 1.55rem; }
-.stage-content ul { display: grid; gap: 11px; margin: 22px 0 28px; padding: 20px 0 0; border-top: 1px solid var(--line); list-style: none; color: var(--muted); font-size: 14px; }
+.stage-content h3 { max-width: none; min-height: 58px; font-size: 1.55rem; }
+.stage-content ul { display: grid; gap: 8px; margin: 16px 0 20px; padding: 16px 0 0; border-top: 1px solid var(--line); list-style: none; color: var(--muted); font-size: 14px; }
 .stage-content li { position: relative; padding-left: 18px; }
 .stage-content li::before { content: ""; position: absolute; left: 0; top: .7em; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
 .stage-content .btn { width: 100%; margin-top: auto; padding-inline: 14px; white-space: normal; text-align: center; }
@@ -657,9 +657,10 @@ h3 { line-height: 1.22; }
   .help-grid { grid-template-columns: 1fr; }
   .need-card { min-height: 0; padding: 20px; }
   .need-number { margin-bottom: 18px; }
-  .life-stage-heading { margin-bottom: 30px; }
-  .stage-index { padding: 20px 22px 16px; }
-  .stage-content { padding: 24px; }
+  .life-stage-section { padding-block: 48px; }
+  .life-stage-heading { margin-bottom: 24px; }
+  .stage-index { padding: 16px 20px 12px; }
+  .stage-content { padding: 20px; }
   .why-point { grid-template-columns: 42px 1fr; }
   .doctors-section { padding-block: 58px; }
   .doctor-trust { padding: 28px 24px; border-radius: 22px; }
