@@ -621,7 +621,7 @@ h3 { line-height: 1.22; }
 .visit-phone { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 12px; padding: 14px 16px; border-radius: 12px; color: var(--teal-dark); background: var(--mint); }
 .visit-phone span { font-size: 14px; }
 .visit-phone strong { font-size: 16px; }
-.footer-contact { margin-top: 14px; font-size: 14px; line-height: 1.65; }
+.footer-contact { margin-top: 14px; font-size: 16px; line-height: 1.6; }
 .footer-contact a { color: white; font-weight: 750; }
 .final-cta { padding-block: 82px; background: linear-gradient(120deg, var(--teal-dark), var(--navy)); }
 .final-cta .eyebrow { color: #bcece6; margin-bottom: 12px; }
