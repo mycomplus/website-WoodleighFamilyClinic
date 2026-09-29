@@ -441,3 +441,175 @@ h3 { line-height: 1.22; }
   .nav-group.open .services-menu { display: grid; transform: none; }
   .services-menu a { padding: 11px 12px; }
 }
+
+/* Homepage patient decision journey */
+.journey-hero {
+  padding-block: 68px 82px;
+  background: linear-gradient(128deg, #f6fbfc 0%, #fff 48%, #e7f4f1 100%);
+}
+.journey-hero .hero-grid { grid-template-columns: 1.08fr .92fr; }
+.journey-hero .hero-media img { height: 520px; }
+.journey-hero .trust-list { max-width: 680px; }
+.section-intro {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 38px;
+}
+.section-intro .lead { max-width: 500px; padding-bottom: 4px; }
+.help-section { padding-block: 94px 104px; }
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.need-card {
+  position: relative;
+  min-height: 270px;
+  padding: 28px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: white;
+  transition: background .2s ease, transform .2s ease;
+}
+.need-card:hover { z-index: 1; background: var(--mint); transform: translateY(-3px); }
+.need-number {
+  display: inline-flex;
+  margin-bottom: 42px;
+  color: var(--teal-dark);
+  font-family: Manrope, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+.need-card h3 { font-size: 1.35rem; }
+.need-card p { margin-top: 11px; color: var(--muted); font-size: 15px; }
+.journey-link { display: inline-block; margin-top: 24px; color: var(--teal-dark); font-size: 14px; font-weight: 750; }
+.life-stage-section { background: var(--mint); }
+.life-stage-heading { max-width: 770px; margin-bottom: 46px; }
+.life-stage-heading .lead { margin-top: 16px; }
+.stage-list { display: grid; gap: 16px; }
+.stage-panel {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 260px;
+  overflow: hidden;
+  border: 1px solid rgba(12,51,86,.1);
+  border-radius: 24px;
+  background: rgba(255,255,255,.78);
+}
+.stage-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  color: var(--teal-dark);
+  background: rgba(255,255,255,.5);
+  font-family: Manrope, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+.stage-index span { color: var(--navy); font-size: 14px; letter-spacing: .12em; text-transform: uppercase; }
+.stage-content {
+  display: grid;
+  grid-template-columns: minmax(220px, .9fr) 1fr auto;
+  gap: 38px;
+  align-items: center;
+  padding: 32px 34px;
+}
+.stage-content h3 { max-width: 260px; font-size: 1.7rem; }
+.stage-content ul { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 14px; }
+.stage-content li { position: relative; padding-left: 18px; }
+.stage-content li::before { content: ""; position: absolute; left: 0; top: .7em; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+.stage-content .btn { white-space: nowrap; }
+.stage-adults { background: white; }
+.stage-prevention { background: #f7fafc; }
+.why-section { background: var(--cream); }
+.why-layout { display: grid; grid-template-columns: .82fr 1.18fr; gap: 86px; align-items: start; }
+.why-intro { position: sticky; top: 118px; }
+.why-intro .lead { margin-top: 18px; }
+.why-points { border-top: 1px solid #e8ded3; }
+.why-point {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid #e8ded3;
+}
+.why-point > span { color: var(--teal-dark); font-family: Manrope, sans-serif; font-size: 13px; font-weight: 800; letter-spacing: .12em; }
+.why-point h3 { margin-bottom: 8px; }
+.why-point p { max-width: 560px; color: var(--muted); }
+.doctors-section { padding-block: 92px; background: var(--blue); scroll-margin-top: 90px; }
+.doctor-trust {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 72px;
+  align-items: center;
+  padding: 64px;
+  overflow: hidden;
+  border-radius: 30px;
+  color: white;
+  background: var(--navy);
+  box-shadow: var(--shadow);
+}
+.doctor-trust h2 { color: white; }
+.doctor-trust .eyebrow { color: #6fe0d3; }
+.doctor-trust .lead { margin-top: 18px; color: #d5e1e9; }
+.doctor-accuracy { max-width: 650px; margin: 18px 0 28px; color: #aebfca; font-size: 14px; }
+.doctor-scope { padding: 34px; border: 1px solid rgba(255,255,255,.16); border-radius: 22px; background: rgba(255,255,255,.06); }
+.doctor-scope > span { display: block; color: white; font-family: Manrope, sans-serif; font-size: 1.4rem; font-weight: 750; line-height: 1.3; }
+.doctor-scope ul { display: grid; gap: 13px; margin: 24px 0 0; padding: 24px 0 0; border-top: 1px solid rgba(255,255,255,.14); list-style: none; color: #d5e1e9; }
+.doctor-scope li::before { content: "✓"; margin-right: 10px; color: #6fe0d3; font-weight: 900; }
+.visit-section { padding-block: 104px; }
+.visit-section .location-copy .lead { margin-top: 8px; }
+.final-cta { padding-block: 82px; background: linear-gradient(120deg, var(--teal-dark), var(--navy)); }
+.final-cta .eyebrow { color: #bcece6; margin-bottom: 12px; }
+.final-cta .btn-secondary { color: white; border-color: rgba(255,255,255,.45); background: transparent; }
+.final-cta .btn-secondary:hover { border-color: white; background: rgba(255,255,255,.08); }
+
+@media (max-width: 1060px) {
+  .help-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stage-panel { grid-template-columns: 160px 1fr; }
+  .stage-content { grid-template-columns: 1fr 1fr; }
+  .stage-content .btn { justify-self: start; }
+  .why-layout { gap: 52px; }
+  .doctor-trust { gap: 44px; padding: 48px; }
+}
+
+@media (max-width: 800px) {
+  .journey-hero .hero-grid, .section-intro, .why-layout, .doctor-trust { grid-template-columns: 1fr; }
+  .journey-hero .hero-media img { height: 400px; }
+  .section-intro { gap: 16px; }
+  .help-grid { grid-template-columns: 1fr 1fr; }
+  .need-card { min-height: 250px; }
+  .stage-panel { grid-template-columns: 112px 1fr; }
+  .stage-index { padding: 24px; font-size: 2rem; }
+  .stage-content { grid-template-columns: 1fr; gap: 20px; padding: 28px; }
+  .stage-content h3 { max-width: none; }
+  .stage-content ul { max-width: 530px; }
+  .why-intro { position: static; }
+  .doctor-trust { gap: 34px; padding: 40px; }
+}
+
+@media (max-width: 560px) {
+  .journey-hero { padding-block: 42px 58px; }
+  .journey-hero .hero-media img { height: 290px; }
+  .help-section { padding-block: 60px; }
+  .help-grid { grid-template-columns: 1fr; }
+  .need-card { min-height: 0; padding: 24px; }
+  .need-number { margin-bottom: 26px; }
+  .life-stage-heading { margin-bottom: 30px; }
+  .stage-panel { grid-template-columns: 1fr; }
+  .stage-index { min-height: 92px; flex-direction: row; align-items: center; }
+  .stage-content { padding: 24px; }
+  .stage-content ul { grid-template-columns: 1fr; }
+  .stage-content .btn { width: 100%; white-space: normal; }
+  .why-point { grid-template-columns: 42px 1fr; }
+  .doctors-section { padding-block: 58px; }
+  .doctor-trust { padding: 28px 24px; border-radius: 22px; }
+  .doctor-scope { padding: 24px; }
+  .visit-section { padding-block: 62px; }
+}
