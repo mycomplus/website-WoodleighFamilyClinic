@@ -554,19 +554,24 @@ h3 { line-height: 1.22; }
 .stage-prevention .stage-index { color: #3e7891; }
 .stage-prevention .stage-index span { background: #edf5f8; }
 .why-section { background: var(--cream); }
-.why-layout { display: grid; grid-template-columns: .82fr 1.18fr; gap: 86px; align-items: start; }
-.why-intro { position: sticky; top: 118px; }
-.why-intro .lead { margin-top: 18px; }
-.why-points { border-top: 1px solid #e8ded3; }
+.why-layout { display: block; }
+.why-intro { max-width: 760px; margin-bottom: 42px; }
+.why-intro .lead { max-width: 650px; margin-top: 16px; }
+.why-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #e3d8cc; border-left: 1px solid #e3d8cc; }
 .why-point {
   display: grid;
-  grid-template-columns: 54px 1fr;
-  gap: 20px;
-  padding: 28px 0;
-  border-bottom: 1px solid #e8ded3;
+  grid-template-columns: 46px 1fr;
+  gap: 18px;
+  min-height: 190px;
+  padding: 30px 32px;
+  border-right: 1px solid #e3d8cc;
+  border-bottom: 1px solid #e3d8cc;
+  background: rgba(255,255,255,.28);
 }
-.why-point > span { color: var(--teal-dark); font-family: Manrope, sans-serif; font-size: 13px; font-weight: 800; letter-spacing: .12em; }
-.why-point h3 { margin-bottom: 8px; }
+.why-point:nth-child(2),
+.why-point:nth-child(3) { background: rgba(255,255,255,.54); }
+.why-point > span { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 50%; color: var(--teal-dark); background: var(--mint); font-family: Manrope, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+.why-point h3 { margin: 6px 0 10px; }
 .why-point p { max-width: 560px; color: var(--muted); }
 .doctors-section { padding-block: 92px; background: var(--blue); scroll-margin-top: 90px; }
 .doctor-trust {
@@ -617,6 +622,7 @@ h3 { line-height: 1.22; }
   .stage-list { grid-template-columns: 1fr; }
   .stage-panel { min-height: 0; }
   .stage-content h3 { min-height: 0; }
+  .why-points { grid-template-columns: 1fr; }
   .why-intro { position: static; }
   .doctor-trust { gap: 34px; padding: 40px; }
 }
