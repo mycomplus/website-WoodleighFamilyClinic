@@ -340,3 +340,97 @@ h3 { line-height: 1.22; }
   .page-hero { padding: 48px 0; }
   .page-hero-image img { height: 280px; }
 }
+
+/* Consolidated services navigation */
+.nav-group { position: relative; }
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  border: 0;
+  color: #345063;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.nav-link:hover,
+.nav-link.is-current,
+.nav-group.open .nav-link { color: var(--teal); }
+.nav-plus {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--teal-dark);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform .2s ease;
+}
+.nav-group.open .nav-plus,
+.nav-group:focus-within .nav-plus { transform: rotate(45deg); }
+.services-menu {
+  position: absolute;
+  top: calc(100% + 13px);
+  left: 50%;
+  z-index: 60;
+  width: 310px;
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 8px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.98);
+  box-shadow: 0 18px 46px rgba(12,51,86,.13);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+.nav-group:hover .services-menu,
+.nav-group:focus-within .services-menu,
+.nav-group.open .services-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.services-menu a {
+  display: grid;
+  gap: 2px;
+  padding: 12px 13px;
+  border-radius: 11px;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 750;
+}
+.services-menu a:hover,
+.services-menu a[aria-current="page"] { color: var(--teal-dark); background: var(--mint); }
+.services-menu small { color: var(--muted); font-size: 12px; font-weight: 500; line-height: 1.35; }
+.services-menu a:hover small,
+.services-menu a[aria-current="page"] small { color: #52727b; }
+
+@media (max-width: 1060px) {
+  .nav-group { width: 100%; }
+  .nav-link { width: 100%; justify-content: space-between; padding: 10px 4px; font-size: 16px; }
+  .services-menu {
+    position: static;
+    width: 100%;
+    display: none;
+    margin: 2px 0 6px;
+    padding: 6px;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    border-radius: 14px;
+    box-shadow: none;
+    background: var(--blue);
+  }
+  .nav-group:hover .services-menu,
+  .nav-group:focus-within .services-menu { display: none; transform: none; }
+  .nav-group.open .services-menu { display: grid; transform: none; }
+  .services-menu a { padding: 11px 12px; }
+}
