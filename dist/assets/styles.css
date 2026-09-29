@@ -239,6 +239,8 @@ p { margin: 0; }
   .location-copy { padding-top: 0; }
   .contact-list li { display: grid; gap: 3px; }
   .contact-list strong { text-align: left; }
+  .visit-hours > div { grid-template-columns: 1fr; gap: 3px; }
+  .visit-phone { align-items: flex-start; flex-direction: column; gap: 4px; }
   .footer-grid { grid-template-columns: 1fr; gap: 38px; }
   .footer-grid > :last-child { grid-column: auto; }
   .footer-bottom { flex-direction: column; }
@@ -596,10 +598,27 @@ h3 { line-height: 1.22; }
 .doctor-scope li::before { content: "✓"; margin-right: 10px; color: #6fe0d3; font-weight: 900; }
 .visit-section { padding-block: 104px; }
 .visit-section .location-copy .lead { margin-top: 8px; }
-.visit-contact-list { margin: 0 0 22px; }
-.visit-contact-list li { align-items: flex-start; }
-.visit-contact-list strong { max-width: 330px; line-height: 1.65; }
-.visit-contact-list a { color: var(--teal-dark); }
+.visit-details { margin: 0 0 22px; border: 1px solid var(--line); border-radius: 16px; background: #fbfdfd; }
+.visit-details summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 78px; padding: 16px 20px; color: var(--navy); cursor: pointer; list-style: none; }
+.visit-details summary::-webkit-details-marker { display: none; }
+.visit-details summary > span:first-child { display: grid; gap: 4px; }
+.visit-details summary strong { font-size: 16px; }
+.visit-details summary small { color: var(--muted); font-size: 14px; }
+.visit-details-toggle { position: relative; display: grid; width: 34px; height: 34px; flex: 0 0 34px; place-items: center; border-radius: 50%; color: var(--teal-dark); background: var(--mint); }
+.visit-details-toggle::before, .visit-details-toggle::after { content: ""; position: absolute; width: 12px; height: 2px; border-radius: 2px; background: currentColor; transition: transform .2s ease; }
+.visit-details-toggle::after { transform: rotate(90deg); }
+.visit-details[open] .visit-details-toggle::after { transform: rotate(0); }
+.visit-details summary:focus-visible { outline-offset: -3px; border-radius: 16px; }
+.visit-details-content { padding: 0 20px 20px; }
+.visit-hours { padding-top: 14px; border-top: 1px solid var(--line); }
+.visit-hours > div { display: grid; grid-template-columns: minmax(115px, .8fr) 1fr; gap: 18px; padding: 10px 0; }
+.visit-hours > div + div { border-top: 1px dashed #dbe6e9; }
+.visit-hours span, .visit-hours strong { font-size: 14px; }
+.visit-hours span { color: var(--muted); }
+.visit-hours strong { color: var(--navy); line-height: 1.55; }
+.visit-phone { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 12px; padding: 14px 16px; border-radius: 12px; color: var(--teal-dark); background: var(--mint); }
+.visit-phone span { font-size: 14px; }
+.visit-phone strong { font-size: 16px; }
 .footer-contact { margin-top: 14px; font-size: 14px; line-height: 1.65; }
 .footer-contact a { color: white; font-weight: 750; }
 .final-cta { padding-block: 82px; background: linear-gradient(120deg, var(--teal-dark), var(--navy)); }
