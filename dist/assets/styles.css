@@ -571,13 +571,13 @@ h3 { line-height: 1.22; }
 .why-point > span { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 50%; color: var(--teal-dark); background: var(--mint); font-family: Manrope, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
 .why-point h3 { margin: 6px 0 10px; }
 .why-point p { max-width: 560px; color: var(--muted); }
-.doctors-section { padding-block: 92px; background: var(--blue); scroll-margin-top: 90px; }
+.doctors-section { padding-block: 64px; background: var(--blue); scroll-margin-top: 90px; }
 .doctor-trust {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
-  gap: 72px;
+  gap: 48px;
   align-items: center;
-  padding: 64px;
+  padding: 40px;
   overflow: hidden;
   border-radius: 30px;
   color: white;
@@ -586,11 +586,11 @@ h3 { line-height: 1.22; }
 }
 .doctor-trust h2 { color: white; }
 .doctor-trust .eyebrow { color: #6fe0d3; }
-.doctor-trust .lead { margin-top: 18px; color: #d5e1e9; }
-.doctor-accuracy { max-width: 650px; margin: 18px 0 28px; color: #aebfca; font-size: 14px; }
-.doctor-scope { padding: 34px; border: 1px solid rgba(255,255,255,.16); border-radius: 22px; background: rgba(255,255,255,.06); }
+.doctor-trust .lead { margin-top: 14px; color: #d5e1e9; }
+.doctor-accuracy { max-width: 650px; margin: 12px 0 20px; color: #aebfca; font-size: 14px; }
+.doctor-scope { padding: 28px; border: 1px solid rgba(255,255,255,.16); border-radius: 22px; background: rgba(255,255,255,.06); }
 .doctor-scope > span { display: block; color: white; font-family: Manrope, sans-serif; font-size: 1.4rem; font-weight: 750; line-height: 1.3; }
-.doctor-scope ul { display: grid; gap: 13px; margin: 24px 0 0; padding: 24px 0 0; border-top: 1px solid rgba(255,255,255,.14); list-style: none; color: #d5e1e9; }
+.doctor-scope ul { display: grid; gap: 10px; margin: 18px 0 0; padding: 18px 0 0; border-top: 1px solid rgba(255,255,255,.14); list-style: none; color: #d5e1e9; }
 .doctor-scope li::before { content: "✓"; margin-right: 10px; color: #6fe0d3; font-weight: 900; }
 .visit-section { padding-block: 104px; }
 .visit-section .location-copy .lead { margin-top: 8px; }
@@ -641,7 +641,7 @@ h3 { line-height: 1.22; }
   .stage-content h3 { min-height: 0; }
   .why-points { grid-template-columns: 1fr; }
   .why-intro { position: static; }
-  .doctor-trust { gap: 34px; padding: 40px; }
+  .doctor-trust { gap: 30px; padding: 32px; }
 }
 
 @media (max-width: 560px) {
@@ -656,8 +656,8 @@ h3 { line-height: 1.22; }
   .stage-index { padding: 16px 20px 12px; }
   .stage-content { padding: 20px; }
   .why-point { grid-template-columns: 42px 1fr; }
-  .doctors-section { padding-block: 58px; }
-  .doctor-trust { padding: 28px 24px; border-radius: 22px; }
-  .doctor-scope { padding: 24px; }
+  .doctors-section { padding-block: 44px; }
+  .doctor-trust { padding: 24px 20px; border-radius: 22px; }
+  .doctor-scope { padding: 20px; }
   .visit-section { padding-block: 62px; }
 }
