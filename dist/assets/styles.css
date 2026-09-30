@@ -551,19 +551,19 @@ h3 { line-height: 1.22; }
 .stage-prevention { border-top-color: #4f8ca6; }
 .stage-prevention .stage-index { color: #3e7891; }
 .stage-prevention .stage-index span { background: #edf5f8; }
-.why-section { background: var(--cream); }
+.why-section { background: var(--blue); }
 .why-layout { display: block; }
 .why-intro { max-width: 760px; margin-bottom: 42px; }
 .why-intro .lead { max-width: 650px; margin-top: 16px; }
-.why-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #e3d8cc; border-left: 1px solid #e3d8cc; }
+.why-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .why-point {
   display: grid;
   grid-template-columns: 46px 1fr;
   gap: 18px;
   min-height: 190px;
   padding: 30px 32px;
-  border-right: 1px solid #e3d8cc;
-  border-bottom: 1px solid #e3d8cc;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   background: rgba(255,255,255,.28);
 }
 .why-point:nth-child(2),
