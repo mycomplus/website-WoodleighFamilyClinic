@@ -476,13 +476,11 @@ h3 { line-height: 1.22; }
 .journey-hero .hero-media img { height: 520px; }
 .journey-hero .trust-list { max-width: 680px; }
 .section-intro {
-  display: grid;
-  grid-template-columns: 1.08fr .92fr;
-  gap: 70px;
-  align-items: end;
+  display: block;
   margin-bottom: 30px;
 }
-.section-intro .lead { max-width: 500px; padding-bottom: 4px; }
+.section-intro > div { max-width: 760px; }
+.section-intro .lead { max-width: 680px; margin-top: 14px; padding-bottom: 0; }
 .help-section { padding-block: 68px 72px; }
 .help-grid {
   display: grid;
