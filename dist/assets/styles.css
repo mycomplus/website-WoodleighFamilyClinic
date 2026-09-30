@@ -159,7 +159,7 @@ p { margin: 0; }
 .content-block p { color: var(--muted); }
 .prose { max-width: 790px; }
 .prose p + p { margin-top: 18px; }
-.contact-panel { display: grid; grid-template-columns: .95fr 1.05fr; gap: 54px; padding: 46px; border: 1px solid var(--line); border-radius: 28px; background: white; }
+.contact-panel { display: grid; grid-template-columns: minmax(0, 760px); justify-content: center; gap: 0; padding: 46px; border: 1px solid var(--line); border-radius: 28px; background: white; }
 .clinic-visit-card h2 { max-width: 460px; }
 .clinic-address { margin: 18px 0 26px; color: var(--muted); font-size: 16px; font-style: normal; line-height: 1.72; }
 .clinic-facts { margin-bottom: 24px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fbfdfd; }
@@ -174,12 +174,6 @@ p { margin: 0; }
 .clinic-phone { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .clinic-phone .fact-label { margin: 0; }
 .clinic-phone a { padding: 8px 12px; border-radius: 10px; color: var(--teal-dark); background: var(--mint); font-size: 17px; font-weight: 800; }
-.contact-form { display: grid; gap: 16px; }
-.field { display: grid; gap: 7px; }
-.field label { color: var(--navy); font-weight: 750; font-size: 14px; }
-.field input, .field textarea, .field select { width: 100%; min-height: 50px; padding: 12px 14px; color: var(--text); background: white; border: 1px solid #cbd9df; border-radius: 12px; font: inherit; }
-.field textarea { min-height: 120px; resize: vertical; }
-.form-note { color: var(--muted); font-size: 13px; }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .65s ease, transform .65s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
