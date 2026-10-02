@@ -572,6 +572,94 @@ h3 { line-height: 1.22; }
 .why-point h3 { margin: 6px 0 10px; }
 .why-point p { max-width: 560px; color: var(--muted); }
 .doctors-section { padding-block: 24px 40px; background: var(--blue); scroll-margin-top: 90px; }
+
+.family-feedback {
+  margin-top: 28px;
+}
+
+.family-feedback-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 20px;
+}
+
+.family-feedback-head h2 {
+  max-width: 700px;
+  margin-bottom: 0;
+}
+
+.family-feedback-head .lead {
+  max-width: 500px;
+  margin: 0;
+}
+
+.family-feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.family-feedback-card {
+  min-height: 190px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(8, 50, 82, .06);
+}
+
+.feedback-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--teal-dark);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.family-feedback-card h3 {
+  margin: 18px 0 8px;
+  font-size: 1.12rem;
+}
+
+.family-feedback-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .96rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .family-feedback-head {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .family-feedback-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .family-feedback-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .family-feedback {
+    margin-top: 22px;
+  }
+
+  .family-feedback-card {
+    padding: 20px;
+  }
+}
 .doctor-trust {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
