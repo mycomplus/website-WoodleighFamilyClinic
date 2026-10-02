@@ -37,6 +37,31 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+document.querySelectorAll('[data-feedback-slider]').forEach((slider) => {
+  const shell = slider.closest('.feedback-slider-shell');
+  const previous = shell?.querySelector('[data-feedback-prev]');
+  const next = shell?.querySelector('[data-feedback-next]');
+  const firstCard = slider.querySelector('.family-feedback-card');
+  if (!firstCard || !previous || !next) return;
+
+  const updateControls = () => {
+    const limit = Math.max(0, slider.scrollWidth - slider.clientWidth);
+    previous.disabled = slider.scrollLeft <= 4;
+    next.disabled = slider.scrollLeft >= limit - 4;
+  };
+
+  const move = (direction) => {
+    const gap = parseFloat(getComputedStyle(slider).columnGap) || 16;
+    const distance = firstCard.getBoundingClientRect().width + gap;
+    slider.scrollBy({ left: distance * direction, behavior: 'smooth' });
+  };
+
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  slider.addEventListener('scroll', updateControls, { passive: true });
+  window.addEventListener('resize', updateControls);
+  updateControls();
+});
 const form = document.querySelector('[data-contact-form]');
 if (form) form.addEventListener('submit', (event) => {
   event.preventDefault();
