@@ -105,6 +105,25 @@ p { margin: 0; }
 .service-card { padding: 30px; }
 .service-card .icon-box { margin-bottom: 24px; }
 .service-card h3 { margin-bottom: 10px; }
+.notice a { color: var(--teal-dark); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+
+.planning-section { padding-block: 80px; background: #fff; scroll-margin-top: 96px; }
+.planning-intro { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: end; margin-bottom: 28px; }
+.planning-intro h2 { max-width: 720px; }
+.planning-intro .lead { max-width: 520px; }
+.planning-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(260px, .82fr); gap: 18px; align-items: stretch; }
+.planning-card, .planning-appointment { padding: 28px; border-radius: 22px; }
+.planning-card { display: flex; flex-direction: column; border: 1px solid var(--line); border-top: 4px solid var(--teal); background: var(--white); box-shadow: 0 14px 34px rgba(8, 50, 82, .05); }
+.planning-tag { align-self: flex-start; padding: 6px 10px; border-radius: 999px; color: var(--teal-dark); background: var(--mint); font-size: .76rem; font-weight: 800; letter-spacing: .1em; }
+.planning-card h3, .planning-appointment h3 { margin: 18px 0 10px; }
+.planning-card p { margin-bottom: 22px; color: var(--muted); }
+.planning-card .text-link { margin-top: auto; color: var(--teal-dark); font-weight: 800; }
+.planning-appointment { color: #fff; background: var(--navy); }
+.planning-appointment .eyebrow { color: #6fe0d3; }
+.planning-appointment h3 { color: #fff; }
+.planning-appointment p { color: #d5e1e9; }
+.planning-appointment .btn { margin-top: 22px; }
+.planning-appointment small { display: block; margin-top: 18px; color: #aebfca; font-size: .78rem; line-height: 1.5; }
 .features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .feature-card { padding: 30px 24px; border-color: transparent; background: rgba(255,255,255,.74); }
 .feature-number { color: var(--teal); font-family: Manrope, sans-serif; font-size: 13px; font-weight: 800; letter-spacing: .14em; }
@@ -438,6 +457,19 @@ h3 { line-height: 1.22; }
 .service-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .focused-card .btn { align-self: flex-start; margin-top: auto; }
 @media (max-width: 800px) { .service-grid-4 { grid-template-columns: 1fr; } }
+
+@media (max-width: 980px) {
+  .planning-intro { grid-template-columns: 1fr; gap: 14px; }
+  .planning-grid { grid-template-columns: 1fr 1fr; }
+  .planning-appointment { grid-column: 1 / -1; }
+}
+
+@media (max-width: 640px) {
+  .planning-section { padding-block: 58px; }
+  .planning-grid { grid-template-columns: 1fr; }
+  .planning-appointment { grid-column: auto; }
+  .planning-card, .planning-appointment { padding: 24px; }
+}
 
 @media (max-width: 1060px) {
   .nav-group { width: 100%; }
