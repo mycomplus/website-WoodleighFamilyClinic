@@ -2,6 +2,18 @@ const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 const servicesGroup = document.querySelector('.nav-group');
 const servicesToggle = document.querySelector('.nav-services-toggle');
+const appointmentUrl = 'https://book.health.gov.sg/book?institutionId=2096&source=rwg';
+
+document.querySelectorAll('a.btn').forEach((link) => {
+  const label = link.textContent.trim();
+  if (!/^book\b/i.test(label)) return;
+
+  link.href = appointmentUrl;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', `${label} (opens booking page in a new tab)`);
+});
+
 if (menuButton && nav) {
   menuButton.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
